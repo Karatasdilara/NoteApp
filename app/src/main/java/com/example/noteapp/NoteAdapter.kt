@@ -46,7 +46,8 @@ class NoteAdapter(private val mContext: Context,
     override fun onBindViewHolder(holder: CardTasarimTutucu, position: Int) {
         val not = notesList.get(position)
 
-        holder.textNoteBaslik.text = "${not.note_baslik}-${not.note_icerik}"
+        holder.textNoteBaslik.text = "${not.note_baslik}"
+        holder.textNoteIcerik.text = "${not.note_icerik}"
 
         holder.imageViewNokta.setOnClickListener {
             val popupMenu = PopupMenu(mContext, holder.imageViewNokta)
